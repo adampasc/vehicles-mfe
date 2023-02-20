@@ -1,0 +1,18 @@
+@import '@porsche-design-system/components-js/styles/scss';
+@import '@porsche-design-system/utilities/scss';
+
+:host {
+  @include pds-grid();
+  position: relative;
+  overflow: hidden;
+}
+
+.basic-content-grid {
+  margin-top: $p-spacing-32;
+  grid-column-start: $pds-grid-basic-column-start;
+  grid-column-end: $pds-grid-basic-column-end;
+}
+
+.content {
+  margin-top: $p-spacing-16;
+}

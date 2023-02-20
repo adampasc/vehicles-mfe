@@ -15,6 +15,11 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/vehicles-mfe/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
+        "stylePreprocessorOptions": {
+          "includePaths": [
+            "libs", "node_modules"
+          ]
+        },
         "assets": [
           "apps/vehicles-mfe/src/favicon.ico",
           "apps/vehicles-mfe/src/assets"
