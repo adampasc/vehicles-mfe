@@ -1,0 +1,37 @@
+<div class="basic-content-grid">
+  <div class="basic-content">
+    <p-headline variant="headline-1">Vehicles Microfrontend</p-headline>
+  </div>
+  <div class="basic-content content">
+    <p-text>
+      This is a demo to simulate the different ways we integrate other components and code into the vehicle details page.
+    </p-text>
+  </div>
+
+  <div class="basic-content section">
+    <p-headline variant="headline-2">Using the router</p-headline>
+    <ul class="remote-menu">
+      <li>
+        <p-link-pure [active]="rlaHome.isActive">
+          <a
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive #rlaHome="routerLinkActive" routerLink="/">Home</a>
+        </p-link-pure>
+      <li>
+        <p-link-pure [active]="rlaA.isActive">
+          <a routerLinkActive #rlaA="routerLinkActive" routerLink="feature-a">FeatureA</a>
+        </p-link-pure>
+      </li>
+      <li>
+        <p-link-pure [active]="rlaB.isActive" routerLinkActive="active-link">
+          <a routerLinkActive #rlaB="routerLinkActive" routerLink="feature-b">FeatureB</a>
+        </p-link-pure>
+      </li>
+    </ul>
+    <div class="router-outlet">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="divider"></div>
+</div>
+

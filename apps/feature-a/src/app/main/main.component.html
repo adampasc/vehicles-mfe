@@ -1,0 +1,36 @@
+<p-headline variant="headline-3">
+  feature-a component
+</p-headline>
+<p-text>It is not part of an nx library, but in fact a module federated component via a separate app</p-text>
+<p-text>It takes advantage of module federation, which gives a few benefits</p-text>
+<p-text-list>
+  <p-text-list-item>
+    It is entirely seperated
+  </p-text-list-item>
+  <p-text-list-item>
+    It can be developed independently
+  </p-text-list-item>
+  <p-text-list-item>
+    You do not need to serve a huge application, which saves time
+  </p-text-list-item>
+  <p-text-list-item>
+    Modules can even be served from a different domain
+  </p-text-list-item>
+</p-text-list>
+<p-text>
+  But: It is also not all shiny
+</p-text>
+<p-text-list>
+  <p-text-list-item>
+    Shared dependencies are a blessing and a curse
+  </p-text-list-item>
+  <p-text-list-item>
+    The setup is more complex, so are the potential errors and issues.
+  </p-text-list-item>
+  <p-text-list-item>
+    Tree shaking is not possible, because webpack doesn't know which parts are needed and which ones are not.
+  </p-text-list-item>
+  <p-text-list-item>
+    Errors, that previously where compile-time are now potentially happening at runtime.
+  </p-text-list-item>
+</p-text-list>

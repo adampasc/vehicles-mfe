@@ -1,14 +1,26 @@
-<div class="basic-content-grid">
-  <div class="basic-content">
-    <p-headline variant="headline-1">Vehicles Microfrontend</p-headline>
-  </div>
-  <div class="basic-content content">
-    <p-text>
-      This is a demo to simulate the different ways we integrate other components and code into the vehicle details page.
-    </p-text>
-    <p-text>
-      Examples will follow.
-    </p-text>
-  </div>
-</div>
-
+<p-headline variant="headline-3">
+  home component
+</p-headline>
+<p-text>It is part of an nx library, which is already neat:</p-text>
+<p-text-list>
+  <p-text-list-item>
+    It takes advantage of nx affected
+  </p-text-list-item>
+  <p-text-list-item>
+    It is lazy loaded to save a bit in the beginning
+  </p-text-list-item>
+</p-text-list>
+<p-text>
+  But: It is not really isolated from the main application.
+</p-text>
+<p-text-list>
+  <p-text-list-item>
+    It gets compiled and bundled with it.
+  </p-text-list-item>
+  <p-text-list-item>
+    The original app will not work without it.
+  </p-text-list-item>
+  <p-text-list-item>
+    It can not be served from a different web address or server port.
+  </p-text-list-item>
+</p-text-list>

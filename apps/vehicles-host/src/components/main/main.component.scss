@@ -1,0 +1,57 @@
+@import '@porsche-design-system/components-js/styles/scss';
+@import '@porsche-design-system/utilities/scss';
+
+:host {
+  @include pds-grid();
+  position: relative;
+  overflow: hidden;
+}
+
+.router-outlet {
+  margin-top: $p-spacing-32;
+}
+
+.remote-menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin-top: $p-spacing-16;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0 $p-spacing-32;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.active-link {
+
+}
+
+.basic-content-grid {
+  margin-top: $p-spacing-32;
+  grid-column-start: $pds-grid-basic-column-start;
+  grid-column-end: $pds-grid-basic-column-end;
+}
+
+.section {
+  margin-top: $p-spacing-32;
+}
+
+.content {
+  margin-top: $p-spacing-16;
+}
+
+.divider {
+  margin-top: $p-spacing-32;
+  display: block;
+  height: 1px;
+  border-bottom: 1px solid $p-color-neutral-contrast-medium;
+  width: 100%;
+}
