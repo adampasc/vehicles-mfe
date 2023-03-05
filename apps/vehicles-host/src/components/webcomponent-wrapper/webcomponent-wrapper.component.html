@@ -1,0 +1,37 @@
+<p-text>
+  Webcomponents can be added, too. They have advantages and disadvantages.
+  They are isolated in themselves, which makes them ideal when you want to avoid a lot of team sync.
+  But they can become more heavy over time, as they do not share anything with the host.
+</p-text>
+<p-text>
+  Also, nx support is not as great.
+</p-text>
+
+<p-tabs-bar [activeTabIndex]="tabIndex" (tabChange)="onTabChange($event)">
+  <ng-container *ngFor="let tabPanel of tabPanels; let i = index">
+    <button type="button" [attr.id]="'tab-item-' + i" [attr.aria-controls]="'tab-panel-' + i">
+      {{ tabPanel }}
+    </button>
+  </ng-container>
+</p-tabs-bar>
+
+<ng-container>
+  <div
+    [attr.id]="'tab-panel-0'"
+    [hidden]="tabIndex !== 0"
+    [tabindex]="tabIndex === 0"
+    role="tabpanel"
+    [attr.aria-labelledby]="'tab-item-0'"
+  >
+    <my-component-a *axLazyElement="elementAUrl"></my-component-a>
+  </div>
+  <div
+    [attr.id]="'tab-panel-1'"
+    [hidden]="tabIndex !== 1"
+    [tabindex]="tabIndex === 1"
+    role="tabpanel"
+    [attr.aria-labelledby]="'tab-item-1'"
+  >
+    <my-component-b *axLazyElement="elementBUrl"></my-component-b>
+  </div>
+</ng-container>

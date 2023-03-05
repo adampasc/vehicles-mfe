@@ -1,15 +1,18 @@
 <div class="basic-content-grid">
-  <div class="basic-content">
+  <section class="basic-content">
     <p-headline variant="headline-1">Vehicles Microfrontend</p-headline>
-  </div>
-  <div class="basic-content content">
+  </section>
+  <section class="basic-content content">
     <p-text>
       This is a demo to simulate the different ways we integrate other components and code into the vehicle details page.
     </p-text>
-  </div>
+  </section>
 
-  <div class="basic-content section">
+  <section class="basic-content section">
     <p-headline variant="headline-2">Using the router</p-headline>
+    <p-text>
+      Loading module federated components via the router is straight forward. Basically, just like lazy loading from a remote entry.
+    </p-text>
     <ul class="remote-menu">
       <li>
         <p-link-pure [active]="rlaHome.isActive">
@@ -31,7 +34,12 @@
     <div class="router-outlet">
       <router-outlet></router-outlet>
     </div>
-  </div>
+  </section>
   <div class="divider"></div>
+
+  <section class="basic-content section">
+    <p-headline variant="headline-2">Loading webcomponents</p-headline>
+    <vehicles-mfe-webcomponent-wrapper></vehicles-mfe-webcomponent-wrapper>
+  </section>
 </div>
 

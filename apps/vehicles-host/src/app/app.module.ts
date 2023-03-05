@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -7,17 +7,21 @@ import { appRoutes } from './app.routes';
 import { HomeModule } from '@vehicles-mfe/home';
 import { PorscheDesignSystemModule } from '@porsche-design-system/components-angular';
 import { MainComponent } from '../components/main/main.component';
+import { WebcomponentWrapperComponent } from '../components/webcomponent-wrapper/webcomponent-wrapper.component';
+import { LazyElementsModule } from '@angular-extensions/elements';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent],
+  declarations: [AppComponent, MainComponent, WebcomponentWrapperComponent],
   exports: [MainComponent],
   imports: [
     BrowserModule,
     HomeModule,
     PorscheDesignSystemModule,
+    LazyElementsModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
