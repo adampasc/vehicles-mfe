@@ -10,9 +10,11 @@
 
   <section class="basic-content section">
     <p-headline variant="headline-2">Using the router</p-headline>
-    <p-text>
-      Loading module federated components via the router is straight forward. Basically, just like lazy loading from a remote entry.
-    </p-text>
+    <div class="description">
+      <p-text>
+        Loading module federated components via the router is straight forward. Basically, just like lazy loading from a remote entry.
+      </p-text>
+    </div>
     <ul class="remote-menu">
       <li>
         <p-link-pure [active]="rlaHome.isActive">
@@ -36,10 +38,46 @@
     </div>
   </section>
   <div class="divider"></div>
-
   <section class="basic-content section">
     <p-headline variant="headline-2">Loading webcomponents</p-headline>
+    <div class="description">
+      <p-text>
+        Webcomponents can be added, too. They have advantages and disadvantages.
+        They are isolated in themselves, which makes them ideal when you want to avoid a lot of team sync.
+        But they can become more heavy over time, as they do not share anything with the host.
+      </p-text>
+      <p-text>
+        Also, nx support is not as great.
+      </p-text>
+    </div>
     <vehicles-mfe-webcomponent-wrapper></vehicles-mfe-webcomponent-wrapper>
+  </section>
+  <div class="divider"></div>
+  <section class="basic-content section">
+    <p-headline variant="headline-2">Loading federated components</p-headline>
+    <div class="description">
+      <p-text>
+        Similar to loading our own federated modules, we can add federated components and load them through code
+      </p-text>
+    </div>
+    <vehicles-mfe-module-federation-wrapper [module]="remoteModule"></vehicles-mfe-module-federation-wrapper>
+  </section>
+  <div class="divider"></div>
+  <section class="basic-content section">
+    <p-headline variant="headline-2">Sources</p-headline>
+    <div class="description">
+      <p-text-list>
+        <p-text-list-item>
+          <p-link-pure href="https://github.com/adampasc/vehicles-mfe">Main application</p-link-pure>
+        </p-text-list-item>
+        <p-text-list-item>
+          <p-link-pure href="https://github.com/adampasc/vehicles-remote">Remote MFE Components</p-link-pure>
+        </p-text-list-item>
+        <p-text-list-item>
+          <p-link-pure href="https://github.com/adampasc/vehicles-web-components">Web Components</p-link-pure>
+        </p-text-list-item>
+      </p-text-list>
+    </div>
   </section>
 </div>
 

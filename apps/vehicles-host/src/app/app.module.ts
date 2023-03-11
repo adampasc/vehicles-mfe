@@ -9,9 +9,17 @@ import { PorscheDesignSystemModule } from '@porsche-design-system/components-ang
 import { MainComponent } from '../components/main/main.component';
 import { WebcomponentWrapperComponent } from '../components/webcomponent-wrapper/webcomponent-wrapper.component';
 import { LazyElementsModule } from '@angular-extensions/elements';
+import {
+  ModuleFederationWrapperComponent
+} from '../components/module-federation-wrapper/module-federation-wrapper.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, WebcomponentWrapperComponent],
+  declarations: [
+    AppComponent,
+    MainComponent,
+    WebcomponentWrapperComponent,
+    ModuleFederationWrapperComponent
+  ],
   exports: [MainComponent],
   imports: [
     BrowserModule,

@@ -14,4 +14,10 @@ import { PorscheDesignSystemModule } from '@porsche-design-system/components-ang
     CommonModule, RouterModule.forChild(remoteRoutes)],
   providers: [],
 })
-export class RemoteEntryModule {}
+export class RemoteEntryModule {
+  static getSharedComponents() {
+    return {
+      'MainComponent': MainComponent
+    };
+  }
+}

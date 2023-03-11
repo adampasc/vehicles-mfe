@@ -5,10 +5,15 @@
   @include pds-grid();
   position: relative;
   overflow: hidden;
+  margin-bottom: $p-spacing-72;
 }
 
 .router-outlet {
   margin-top: $p-spacing-32;
+}
+
+.description {
+  margin-top: $p-spacing-16;
 }
 
 .remote-menu {
