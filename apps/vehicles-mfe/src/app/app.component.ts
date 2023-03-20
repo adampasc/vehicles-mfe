@@ -9,6 +9,4 @@ import { HomeModule } from '@vehicles-mfe/home';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'vehicles-mfe';
-}
+export class AppComponent {}
